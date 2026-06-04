@@ -1,0 +1,51 @@
+{
+  "name": "Gestion Rayon Fruits et Légumes",
+  "short_name": "Rayon Frais",
+  "id": "/rayon-frais-app",
+  "description": "Gestion des codes-barres pour le rayon Fruits et Légumes",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f9fbf9",
+  "theme_color": "#2e7d32",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "label": "Liste des produits"
+    },
+    {
+      "src": "screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Vue bureau"
+    }
+  ]
+}

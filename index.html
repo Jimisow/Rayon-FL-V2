@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Rayon Frais</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2e7d32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Rayon Frais">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <!-- Bibliothèques externes -->
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header" id="appHeader">
+            <button class="menu-btn" id="menuBtn" aria-label="Menu">⚙️</button>
+            <div class="header-top" id="headerTop">
+                <span class="header-emoji">🥦</span>
+                <h1>Rayon Frais</h1>
+            </div>
+            
+            <!-- Recherche -->
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Rechercher un produit..." autocomplete="off">
+                <button class="clear-search" id="clearSearch" aria-label="Effacer">✕</button>
+            </div>
+            
+            <!-- Filtres -->
+            <div class="filter-chips" id="filterChips"></div>
+        </header>
+
+        <!-- Compteur -->
+        <div class="list-header" id="listHeader">
+            <span class="product-count" id="productCount"></span>
+            <button class="sort-btn" id="sortBtn" aria-label="Trier">⇅</button>
+        </div>
+
+        <!-- Liste produits -->
+        <main class="product-list" id="productList">
+            <div class="loading-spinner">⏳ Chargement...</div>
+        </main>
+
+        <!-- Bouton buffer flottant -->
+        <button class="fab" id="bufferFab" aria-label="Modifications">
+            📋 <span class="fab-badge" id="bufferBadge">0</span>
+        </button>
+    </div>
+
+    <!-- Conteneur pour les modals -->
+    <div id="modalContainer"></div>
+
+    <!-- Toast notifications -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Module principal -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
